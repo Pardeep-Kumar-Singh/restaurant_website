@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 13%;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    transition: .3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a span:hover {
+    color: #ff6900;
+}
+
+nav ul li a span {
+    color: #fcdca5;
+    transition: .3s ease;
+}
+
+.logo {
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.aligner>img {
+    height: 40px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+}
+
+.aligner {
+    display: flex;
+    justify-content: center;
+}
+
+.mySlides {
+    height: 65vh;
+    width: 1349px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 4 s;
+}
+
+
+.boxes {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f2ed;
+}
+
+.about {
+    padding: 0 80px;
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+}
+
+@keyframes myfirst {
+    0% {
+        background: #fcdca5;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.naan {
+    padding: 0 50px;
+}
+
+.menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bc3030;
+}
+
+.food {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#img {
+    height: 100%;
+    padding-left: 50px;
+}
+
+.menu-explore {
+    padding: 0 80px;
+}
+
+.menu-explore button {
+    color: #bc3030;
+    font-size: 20px;
+    float: right;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.menu-explore button:hover {
+    background-color: rgba(226, 222, 222, 0.76);
+}
+
+.other {
+    background-color: #FDFAE6;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+}
+
+.hotel {
+    margin: 0 100px;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hotel button {
+    background-color: #B79961;
+    border: 1px solid #c0a777;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 85px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.hotel button:hover {
+    background-color: #c0a777;
+}

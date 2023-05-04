@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="footer-logo-1.png">
+    <script src="style.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="logo.png" class="logo">
+        <nav>
+            <div class="aligner">
+                <ul>
+                    <li><a href="#boxes">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#"><span>ROOMS</span></a></li>
+                    <li><a href="#">WHY US</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+                <img src="volume-off.png" class="volume">
+            </div>
+        </nav>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="full.jpeg" style="width:100%" class="img">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="half.png" style="width:100%" class="img">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="GALLERY7.png" style="width:100%" class="img">
+        </div>
+
+    </div>
+    <section id="boxes">
+        <div class="boxes">
+            <div class="about">
+                <h2 style="font-size: 40px;">ABOUT US</h2><br>
+                <p style="font-size: 17px;font-weight: 1px bold;">
+                    The famed eatery was founded by Sardar Prakash Singh in 1956 mainly <br> cater to the needs of truck
+                    drivers. Now it is being looked after by his <br>sons Amrik Singh and Sukhdev Singh. The delicious
+                    meal of dal roti,<br> sabzi and rice were served on charpais initially. Carrying on the legacy<br>
+                    of our olden days, we bring back to you the richness of our food culture<br> with heart-warming
+                    hospitality and classic decor. With our love for<br> authentic Indian cuisine, over the years we
+                    have expanded our menu to<br> include many lip-smacking north Indian and south Indian
+                    delicacies.<br> Serving the likes of our customers for the past many decades, we have<br> also added
+                    many global flavors in our menu with mouth-watering <br>Chinese, Continental food and an array of
+                    sweet dishes. Today, Amrik<br> Sukhdev is a major landmark on the GT Road, known far and wide for
+                    <br>its matchless recipes, faultless service, and an ambiance to relax <br>and rejuvenate. Located
+                    conveniently on NH-1, Amrik Sukhdev is just<br> kind of place to catch up with your family and
+                    friends for an exciting<br> food excursion.
+                </p>
+            </div>
+            <div class="naan">
+                <img src="naan.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="menu">
+            <div class="food">
+                <div id="img1">
+                    <img src="menu-samosa.jpg" alt="img1" style="width:200px;border-radius: 50%;margin-left: 100px">
+                </div>
+                <div class="img2">
+                    <img src="menu-food.jpg" alt="img2" style="width:200px;border-radius: 50%">
+                </div>
+                <div class="img3">
+                    <img src="menu-tea.jpg" alt="img3" style="width:200px;border-radius: 50%;">
+                </div>
+            </div>
+            <div class="menu-explore">
+                <h2 style="font-size: 40px; color: white;text-align: right;">EXPLORE MENU</h2><br><br>
+                <p style="font-size: 17px;color: #f8f9fa;text-align: right;line-height: 1.6;">
+                    A dhaba by heart and soul, Amrik Sukhdev<br> presents a profound selection of its delicious <br>desi
+                    and
+                    videshi dishes on the menu. Known<br> for its “parathas” and soft and creamy butter<br> with a cup
+                    of
+                    hot chai, we have included some<br> drool worthy delicacies to our menu with a <br>variety of tawa,
+                    tandoori and foreign dishes.<br> The soft and gooey gulab jamun and moong<br> dal halwa is a best
+                    way to
+                    end you meal in<br> winters while you can blast the summer heat<br> with kulfi and ice creams.
+                    Explore
+                    our menu<br> for more mouth-watering dishes.<br>
+                </p><br><br>
+                <button type="button">VIEW MENU</button>
+            </div>
+        </div>
+    </section>
+    <div class="other">
+        <div class="home">
+            <img src="homein-intro.jpg" alt="homein-intro" style="width: 90%;margin-left: 100px;border-radius: 10px;">
+        </div>
+        <div class="hotel">
+            <img src="homein-logo.png" alt="homein-logo" style="width: 100%;"><br><br>
+            <p style="text-align: center;margin-right: 15px;">A New Venture by Amrik Sukhdev,<br>
+                which provide luxurious <br><br></p>
+
+            <h3 style="text-align: center;left: 0;right: 0;"> • Rooms • Conference • Banquet • Weddings</h3><br><br>
+            <button type="button">Visit Hotel</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        var icon = document.querySelector(".volume");
+        var icon2 = document.querySelector(".logo");
+
+        var audioElem = document.createElement("audio");
+
+        audioElem.setAttribute('src', 'amrik-audio.mp3');
+        audioElem.setAttribute("autoplay", "autoplay")
+
+        icon.onclick = ('load', function () {
+            audioElem.pause();
+            icon.setAttribute('src', 'volume-off.png');
+        });
+        icon2.onclick = ('load', function () {
+            audioElem.play();
+            icon.setAttribute('src', 'volume-on.gif');
+        });
+
+        // showslider
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+
+    </script>
+</body>
+
+</html>
